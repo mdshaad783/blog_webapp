@@ -36,5 +36,5 @@ A simple and powerful Blog Application where users can create, edit, and delete 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/your-blog-app.git
+   git clone https://github.com/mdshaad783/blog_webapp.git
    cd your-blog-app
