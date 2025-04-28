@@ -9,8 +9,7 @@ export default function CallToAction() {
           Checkout these resources with multiple JavaScript Projects
         </p>
         <Button
-          gradientDuoTone="purpleToPink"
-          className="rounded-tl-xl rounded-bl-none"
+          className="bg-gradient-to-tr from-gray-500 via-gray-600 to-black rounded-lg text-white py-2 px-4"
         >
           <a
             href="https://www.100jsprojects.com"

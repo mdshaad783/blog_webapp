@@ -7,16 +7,16 @@ import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname1 = path.dirname(__filename);
 
-dotenv.config();
-
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => {console.log('MongoDb is connected');})
-  .catch((err) => {
+dotenv.config({ path: path.join(__dirname1, '.env') });
+const port = process.env.PORT; 
+mongoose.connect(process.env.MONGO_URI).then(() => {console.log('MongoDb is connected');}).catch((err) => {
       console.log(err);
 });
-
+console.log("MONGO_URI is: ", process.env.MONGO_URI);
 const __dirname = path.resolve();
 
 const app = express();
@@ -24,8 +24,8 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000!');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port} !`);
 });
 
 app.use('/api/user', userRoutes);

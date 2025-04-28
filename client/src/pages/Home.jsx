@@ -30,7 +30,7 @@ export default function Home() {
           View all posts
         </Link>
       </div>
-      <div className='p-3 bg-amber-100 dark:bg-slate-700'>
+      <div className='p-3 bg-cyan-100 dark:bg-slate-700'>
         <CallToAction />
       </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <Link
               to={'/search'}
-              className='text-lg text-teal-500 hover:underline text-center'
+              className='text-lg text-blue-500 hover:underline text-center'
             >
               View all posts
             </Link>

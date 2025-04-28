@@ -55,10 +55,10 @@ export default function Header() {
         className='self-center whitespace-nowrap text-sm 
         sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-          Rishabh's
+        <span className='bg-gradient-to-tr from-gray-500 via-gray-700 to-black rounded-lg text-white py-2 px-4'>
+          Shaad's
         </span>
-        Blogify
+        {" "}Blogify
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -104,7 +104,7 @@ export default function Header() {
           </Dropdown>
         ) : (
           <Link to='/sign-in'>
-            <Button gradientDuoTone='purpleToBlue' outline>
+            <Button className="bg-gradient-to-tr from-gray-500 via-gray-700 to-black text-white outline-none" outline>
               Sign In
             </Button>
           </Link>
